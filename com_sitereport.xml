@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+    <name>COM_SITEREPORT</name>
+    <author>Vadim Koponov</author>
+    <creationDate>2026-03-12</creationDate>
+    <version>1.0.0</version>
+    <description>COM_SITEREPORT_XML_DESCRIPTION</description>
+
+    <namespace path="src">Joomla\Component\Sitereport</namespace>
+
+    <files folder="components/com_sitereport">
+        <folder>language</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <administration>
+        <menu>COM_SITEREPORT_MENU_TITLE</menu>
+        <files folder="administrator/components/com_sitereport">
+            <folder>language</folder>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <file>config.xml</file>
+        </files>
+    </administration>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+</extension>
